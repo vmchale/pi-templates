@@ -1,0 +1,3 @@
+[submodule "shake-nim"]
+	path = shake-nim
+	url = git@github.com:vmchale/shake-nim.git
