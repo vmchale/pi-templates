@@ -3,7 +3,7 @@ with_readme = true
 
 [files]
 directories = ["src"]
-templates = ["Cargo.toml","src/main.rs",".travis.yml"]
+templates = ["Cargo.toml","src/main.rs",".travis.yml",".gitignore"]
 
 [config]
 version = "0.1.0"
