@@ -1,7 +1,7 @@
 -- ----------------------------------------------------------------- [ Lib.idr ]
--- Module      : {{ project }}.Lib
+-- Module      : {{ Project }}.Lib
 -- Description : {{ description }}
 -- --------------------------------------------------------------------- [ EOH ]
-module {{ project }}.Lib
+module {{ Project }}.Lib
 
 %access export

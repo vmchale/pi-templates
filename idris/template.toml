@@ -3,8 +3,8 @@ with_readme = true
 
 [files]
 files = []
-directories = ["{{ project }}"]
-templates = ["{{ project }}/Lib.idr","Main.idr","{{ project }}.ipkg",".gitignore"]
+directories = ["{{ Project }}"]
+templates = ["{{ Project }}/Lib.idr","Main.idr","{{ project }}.ipkg",".gitignore"]
 
 [config]
 version = "0.1.0"
