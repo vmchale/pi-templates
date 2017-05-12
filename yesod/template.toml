@@ -1,0 +1,14 @@
+license = "BSD3"
+with_readme = true
+
+[files]
+files = ["web-src/cassius/main.cassius","web-src/hamlet/index.hamlet",
+    "src/Backend/Backend.hs","src/Db/AcidState.hs"]
+directories = ["src","app","web-src/cassius","db","logs","keter","config","src/Db","src/Backend","web-src/hamlet","static/css","static/js","static/images","static"]
+templates = ["src/Yesod.hs","app/Main.hs","Setup.hs",
+    "{{ project }}.cabal", "stack.yaml","src/Yesod.hs",
+    ".travis.yml", "default.nix", "release.nix",".gitignore","web-src/hamlet/index.hamlet"]
+
+[config]
+version = "0.1.0.0"
+version_control = "git"
