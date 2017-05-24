@@ -1,6 +1,7 @@
 dist
 dist-newstyle
 doc
+*.aes
 *.min.js
 *.wasm
 *.o
@@ -22,4 +23,6 @@ cabal.project.local
 .HTF/
 .shake
 db
+*.aes
+yesod-devel/
 logs
