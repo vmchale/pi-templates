@@ -1,5 +1,5 @@
 import Html exposing (..)
-import State exposing (model)
+import State exposing (..)
 import View exposing (view)
 import Update exposing (update)
 
