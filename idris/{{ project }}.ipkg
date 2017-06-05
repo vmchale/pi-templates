@@ -5,5 +5,5 @@ bugtracker = http://www.github.com/{{ github_username }}/{{ project }}/issues
 
 pkgs = 
 
-modules = {{ project }}
-        , {{ project }}.Lib
+modules = {{ Project }}
+        , {{ Project }}.Lib
