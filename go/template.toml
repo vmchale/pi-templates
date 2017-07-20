@@ -4,7 +4,7 @@ website = "https://reconfigure.io/" # {{ project }}
 
 [files]
 directories = ["src", "verilog", "teak", "optim"]
-templates = [".gitignore", "src/{{ project }}.go", "optim/default.rules"]
+templates = [".gitignore", "src/{{ project }}.go", "optim/default.rules", "Makefile"]
 
 [config]
 version = "0.1.0"
