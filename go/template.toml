@@ -8,7 +8,7 @@ templates = [".gitignore", "src/{{ project }}.go", "optim/default.rules", "Makef
 
 [config]
 version = "0.1.0"
-version_control = "git"
+version_control = "darcs"
 
 [[user]]
 license_file = "LICENSE"
