@@ -39,8 +39,8 @@ main = version >>= \v -> shakeArgs shakeOptions { shakeFiles = ".shake", shakeLi
         removeFilesAfter ".shake" ["//*"]
 
     ".stack-work/dist/x86_64-linux/Cabal-1.24.2.0_ghcjs/build/{{ project }}/{{ project }}.jsexe/all.js" %> \out -> do
-        need ["style.css","src/Lib.hs"]
-        cmd ["stack", "build", "--stack-yaml", "stack-js.yaml", "--install-ghc"]
+        need ["src/Lib.hs"]
+        cmd ["stack", "build", "--stack-yaml", "stack.yaml", "--install-ghc"]
 
     ".stack-work/dist/x86_64-linux/Cabal-1.24.2.0_ghcjs/build/{{ project }}/{{ project }}.jsexe/all.min.js" %> \out -> do
         need [".stack-work/dist/x86_64-linux/Cabal-1.24.2.0_ghcjs/build/{{ project }}/{{ project }}.jsexe/all.js"]
