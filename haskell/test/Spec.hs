@@ -1,8 +1,0 @@
-import Test.Hspec
-import Test.QuickCheck
-
-main :: IO ()
-main = hspec $ do
-    describe "head" $ do
-        parallel $ it "finds the head of a list" $ do
-            head [1..] `shouldBe` 1

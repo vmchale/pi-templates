@@ -1,0 +1,51 @@
+name:                {{ project }}
+version:             {{ version }}
+-- synopsis:
+-- description:
+homepage:            https://github.com/{{ github-username }}/{{ project }}#readme
+license:             {{ license }}
+license-file:        LICENSE
+author:              {{ name }}
+maintainer:          {{ email }}
+copyright:           Copyright: (c) 2017 Vanessa McHale
+--category:            Web
+build-type:          Simple
+extra-source-files:  stack.yaml
+                   , mad-src/{{ project }}.mad
+extra-doc-files:     README.md
+cabal-version:       >=1.18
+
+Flag development {
+  Description: Enable `-Werror`
+  manual: True
+  default: False
+}
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , miso == 0.9.*
+                     , madlang >= 2.4.2.22
+                     , text
+                     , containers
+                     , file-embed
+  default-language:    Haskell2010
+  if flag(development)
+    ghc-options:       -Werror
+  ghc-options:         -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat
+
+executable {{ project }}
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , {{ project }}
+  default-language:    Haskell2010
+  if flag(development)
+    ghc-options: -Werror
+  ghc-options:         -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat
+
+source-repository head
+  type:     git
+  location: https://github.com/{{ github-username }}/{{ project }}
